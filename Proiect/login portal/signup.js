@@ -74,53 +74,26 @@ function validateSignup(){
 
 }
 
-//login 
-function validateLogin(){
-  var y = document.forms["Myform"]["email"].value;
-  var z = document.forms["Myform"]["password1"].value;
-  
-  if (y=="" && z=="")
-    {
-        alert("Complete all the fields!")
-    }
-  else if (y == "" || y == null) 
-  {
-      alert("Email must be filled out");
-       return false;
-    }
-     else if (z == "" || z == null) 
-  {
-      alert("Password must be filled out");
-       return false;
-    }
-    else 
-    {
-        Congrats()
-    }
-
-}
-function validateCancelLogin(){
-  var y = document.forms["Myform"]["email"].value;
-  var z = document.forms["Myform"]["password1"].value;
-  
-  if (y=="" && z=="")
-    {
-        alert("Complete all the fields!")
-    }
-    else 
-    {
-        ShowAlert()
-    }
-
-}
 
 
-function signin(){
-    const data ={
-    name: document.forms["Myform"]["fname"].value,
-  email:document.forms["Myform"]["email"].value,
-  username: document.forms["Myform"]["username"],value,
-  password: document.forms["Myform"]["password1"].value,
-    };
-    url = 
+function signup() {
+    const data = {
+        name: document.getElementsByName("name")[0].value,
+        email: document.getElementsByName("email")[0].value,
+        password: document.getElementsByName("password")[0].value,
+        company_id: parseInt(document.getElementsByName("company_id")[0].value)
+    }
+    url = "http://localhost:5000/users"
+    params = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    fetch(url, params)
+        .then(ifSuccess)
+        .then(newUserCreated)
+        .catch(ifError)
 }
