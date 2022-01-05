@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="loggedin.css">
+<body>
+    <section class="main">
+
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <img src="/Proiect/images/logo.png" class="brand-img" alt="">
+                <input type="text" class="search-box" placeholder="search">
+                <button class="mypage" onclick="document.location='mypage.html'">My page </button>
+            </div>
+        </nav>
+
+
+        <div class="wrapper" style="float: left; width: 60%;">
+            <div class="post" style="margin-right: 0%;">
+                <div class="info">
+                    <img class="profile-pic"src="/Proiect/images/logo.png" alt="">
+                    <p class="username">username</p>
+                    <button class="comment-btn" style="font-size: small" >Contact</button>  
+                </div>
+                <div> <img src="/Proiect/images/hands.gif" class="post-image" alt="">
+                </div>
+                <div class="post-content">
+                    <p class="description"><span>username </span> text from database</p>
+                    <p class="post-time">time and date</p>
+                </div>
+                <div class="comment-wrapper">
+                    <img src="/Proiect/images/comment.png" class="icon" alt="">
+                    <input type="text" class="comment-box" placeholder="Add a comment">
+                    <button class="comment-btn">post</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="wrapper" style="float: right; width: 40%;" >
+            <div class="post" style="margin-left: 5%; width: 60%; padding: 1%" >
+                <div class="info">
+                    <img class="profile-pic" src="/Proiect/images/chat.png" style="width: 25px; height: auto;">
+                    <p class="username">Messenger</p>
+                </div>
+                
+                <div class="comment-wrapper" style="padding-top: 100%;">
+                    <input type="text" class="comment-box" style="padding-left: 10px;" placeholder="Send message">
+                    <button class="comment-btn">Send</button>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+</body>

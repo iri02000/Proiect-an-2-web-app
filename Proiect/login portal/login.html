@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style_login_signup.css">
+<script src="login_signup.js"></script>
+
+<head>
+
+
+</head>
+<br>
+
+<body>
+    <div class="container">
+        <img src="/Proiect/images/logo.png" class=logo onclick="document.location='main.html'">
+        <h2 class="title">Log In</h2>
+        <form name="Myform" id="form">
+            <label for="email">Email </label>
+            <br>
+            <input type="text" placeholder="name@name.com" class=central id="email">
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" placeholder="********" class=central id="password1">
+            <br>
+            <br>
+            <br>
+            <button for="cancel" style="float: left" id="cancel" onclick="validateCancelLogin()">Cancel</button>
+            <button for="signup" id="signup" style="float: right" onclick="validateLogin(), Return()">Sign-up</button>
+            <br>
+        </form>
+    </div>
+
+
+</body>

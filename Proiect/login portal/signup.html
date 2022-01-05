@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style_login_signup.css">
+<script src="login_signup.js"></script>
+
+<head>
+
+</head>
+
+<body >
+    
+<div class="container">
+    <img src="/Proiect/images/logo.png" class=logo onclick="document.location='main.html'">
+    <h2 class="title">Create your account</h2>
+    <form name="Myform" id ="form">
+    <label for="name">Full Name</label>
+    <br>
+    <input type="text" placeholder="name" class=central id="fname">
+    <br>
+    <label for="email" >Email </label>
+    <br>
+    <input type="text"placeholder="name@name.com"class=central id="email">
+    <br>
+    <label for="username">Username</label>
+    <br>
+    <input type="text" placeholder="username" class=central id="username">
+    <br>
+    <label for="password" >Password</label>
+    <br>
+    <input type="password"placeholder="********"class=central id="password1">
+    <br>
+    <label for="password">Check Password </label>
+    <br>
+    <input type="password"placeholder="********"class=central id="password2">  
+    <br>
+    <br>
+    <br>
+    <button for= "cancel" style="float: left" id="cancel"  onclick="validateCancel()"
+    >Cancel</button>
+    <button for="signup" id= "signup" style="float: right" onclick= "validateSignup(), Return()">Sign-up</button>
+    <br>
+</form>
+</div>
+<footer>
+    
+</footer>
+
+
+</body>
