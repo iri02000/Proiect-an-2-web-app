@@ -1,12 +1,12 @@
 from flask import Flask, request
 from flask_cors import CORS
 
-from Proiect.database.repository import create_user, get_connection
+from repository import create_user, get_connection
 
 app = Flask("b2bapp")
 CORS(app)
 
-dbfile = "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\Programarea aplicatiilor Web\\Seminar 1 Github guide\\G610-WebAppProgramming1-AJ\Proiect\\b2b.db"
+dbfile = "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\\Programarea aplicatiilor Web\\Proiect-an-2-web-app\\Proiect\\b2b.db"
 
 
 @app.route('/users', methods=["POST"])

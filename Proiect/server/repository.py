@@ -22,8 +22,7 @@ def create_user(conn, user_details):
 
 
 conn = get_connection(
-    "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\Programarea aplicatiilor Web\\Seminar 1 Github guide\\G610-WebAppProgramming1-AJ\Proiect\\b2b.db"
-)
+    "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\\Programarea aplicatiilor Web\\Proiect-an-2-web-app\\Proiect\\b2b.db")
 print(conn)
 
 # new_user = ("name", "email", "username", "password")

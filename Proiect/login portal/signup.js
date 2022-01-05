@@ -83,7 +83,7 @@ function signup() {
         password: document.getElementsByName("password")[0].value,
         company_id: parseInt(document.getElementsByName("company_id")[0].value)
     }
-    url = "http://localhost:5000/users"
+    url = "http://localhost:3002/users"
     params = {
         method: 'POST',
         body: JSON.stringify(data),
