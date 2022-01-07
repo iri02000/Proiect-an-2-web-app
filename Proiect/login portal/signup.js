@@ -1,5 +1,7 @@
+console.log("Hii")
+
 function ShowAlert(){
-    alert (" Warning! You are about to reset your inputs. Are you sure you want to continue?!")
+    alert(" Warning! You are about to reset your inputs. Are you sure you want to continue?!")
 }
 
 function Congrats(){
@@ -7,7 +9,7 @@ function Congrats(){
 }
 
 function Return(){
-    console.log ("Success");
+    console.log("Success");
 }
 
 function validateCancel(){
@@ -38,22 +40,22 @@ function validateSignup(){
     {
         alert("Complete all the fields!")
     }
-  else if (x == "" || x == null) 
-  {
+    else if (x == "" || x == null) 
+    {
       alert("Full Name must be filled out");
        return false;
-  }
-  else if (y == "" || y == null) 
-  {
+    }
+    else if (y == "" || y == null) 
+    {
       alert("Email must be filled out");
        return false;
     }
-     else if (z == "" || z == null) 
+    else if (z == "" || z == null) 
   {
       alert("Password must be filled out");
        return false;
     }
-      else if (w == "" || w == null) 
+    else if (w == "" || w == null) 
   {
       alert("Check Password must be filled out");
        return false;
@@ -69,21 +71,23 @@ function validateSignup(){
     
     else 
     {
+        signup()
         Congrats()
     }
 
 }
 
-
-
 function signup() {
     const data = {
-        name: document.getElementsByName("name")[0].value,
-        email: document.getElementsByName("email")[0].value,
-        password: document.getElementsByName("password")[0].value,
-        company_id: parseInt(document.getElementsByName("company_id")[0].value)
+        name: document.getElementById("fname").value,
+        email: document.getElementById("email").value,
+        username: document.getElementById("username").value,
+        password: document.getElementById("password1").value
     }
-    url = "http://localhost:3002/users"
+
+    console.log(data)
+
+    url = "http://localhost:3002/signup"
     params = {
         method: 'POST',
         body: JSON.stringify(data),
@@ -96,4 +100,16 @@ function signup() {
         .then(ifSuccess)
         .then(newUserCreated)
         .catch(ifError)
+}
+
+function ifSuccess(response) {
+    console.log("USER CREATED.");
+}
+
+function ifError(err) {
+    console.log("Error");
+}
+
+function newUserCreated(response) {
+    console.log("New user")
 }

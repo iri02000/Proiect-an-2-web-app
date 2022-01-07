@@ -1,8 +1,5 @@
 
 
-function Congrats(){
-    alert(" Congrats! You have just made your account!")
-}
 
 function Return(){
     console.log ("Success");
@@ -29,7 +26,7 @@ function validateLogin(){
     }
     else 
     {
-        Congrats()
+        signup()
     }
 }
 
@@ -45,4 +42,40 @@ function validateCancelLogin(){
     {
         ShowAlert()
     }
+}
+
+
+function signup() {
+    const data = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password1").value
+    }
+
+    console.log(data)
+
+    url = "http://localhost:3002/login"
+    params = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    fetch(url, params)
+        .then(ifSuccess)
+        .then(newUserCreated)
+        .catch(ifError)
+}
+
+function ifSuccess(response) {
+    console.log("USER logged in.");
+}
+
+function ifError(err) {
+    console.log("Error");
+}
+
+function newUserCreated(response) {
+    console.log("Logged")
 }
