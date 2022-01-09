@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 from repository import create_user, get_connection, get_user_password
 
-app = Flask("b2bapp")
+app = Flask(__name__)
 CORS(app)
 
 dbfile = "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\\Programarea aplicatiilor Web\\Proiect-an-2-web-app\\Proiect\\b2b.db"
@@ -40,13 +40,14 @@ def sign_in():
             existing_password = get_user_password(conn, email)
             if existing_password is None or password != existing_password:
                 error = {
-                    "Failed to sign in"
+                    "error": "Failed to sign in"
                 }
                 return error, 401
-            return '', 204
+            else:
+                return "User logged in", 204
         except Exception as e:
             error = {
-                "FAiled to sign in. Cause {e}"
+                "error": "FAiled to sign in. Cause {e}"
             }
             return error, 500
 
