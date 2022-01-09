@@ -64,7 +64,7 @@ function signup() {
     }
     fetch(url, params)
         .then(ifSuccess)
-        .then(newUserCreated)
+        .then(Logged)
         .catch(ifError)
 }
 
@@ -76,6 +76,6 @@ function ifError(err) {
     console.log("Error");
 }
 
-function newUserCreated(response) {
+function Logged(response) {
     console.log("Logged")
 }
